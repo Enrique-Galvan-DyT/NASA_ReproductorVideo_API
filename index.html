@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/css/init.css">
+    <script src="public/js/jquery/dist/jquery.min.js"></script>
+    
+    <!--Reproductor de video CSS-->
+    <link rel="stylesheet" href="public/js/video.js/dist/video-js.css">
+    <!--Reproductor de video JS-->
+    <script src="public/js/video.js/dist/video.min.js"></script>
+    <!--Archivo js que lo inicializa-->
+    <script src="public/js/video-init.js"></script>
+    
+    <!--NASA para imágenes JS-->
+    <!--Archivo js que inicializa todo-->
+    <script src="public/js/nasa.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!--API Reproductor de Video-->
+        <div class="my-4">
+            <!--poster es un atributo que hará referencia a una imagen que se previsualizará para dar contexto del video-->
+            <video class="video-js" controls preload="auto" width="640" height="264" poster="public/media/logo.png" data-setup="{}">
+                <!--Ruta de video con formato elegido, siempre y cuando sea compatible-->
+                <source src="public/media/un-video-de-10-segundos.mp4" type="video/mp4">
+                <!--Ruta de video en otro formato como sugerencia-->
+                <!--source src="my-video.webm" type="video/webm"-->
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                    <a href="https://videojs.com/html5-video-support/" target="_blank" rel="noopener">supports HTML5 video</a>
+                </p>
+            </video>
+            <!--Edita esta sección para mostrar 3 videos deseados-->
+        </div>
+        
+        <hr>
+        
+        <!--API NASA Images-->
+        <div>
+
+            <div class="row mx-0 my-3">
+                <div class="mb-3 col-12">
+                    <label for="texto" class="form-label">Busca imágenes</label>
+                    <input type="text" id="texto" placeholder="Escribe para buscar..." class="form-control p-2 my-4">
+                </div>
+
+                <!--Intenten hacer que funcione con la cantidad seleccionada de imagenes deseada y buscar al dar clic en el botón -->
+                <div class="input-group col-12">
+                    <select class="form-select" id="imagesCount" aria-label="Example select with button addon">
+                      <option value="5">5 images</option>
+                      <option value="10">10 images</option>
+                      <option value="20">20 images</option>
+                      <option value="100">100 images</option>
+                    </select>
+                    <button class="btn btn-outline-primary" type="button" id="search">Search</button>
+                  </div>
+            </div>
+
+            <div id="resultado"></div>
+        </div>
+    </div>
+
+</body>
+</html>

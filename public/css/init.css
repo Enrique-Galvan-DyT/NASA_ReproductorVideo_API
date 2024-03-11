@@ -1,0 +1,15 @@
+@import url('bootstrap/dist/css/bootstrap.min.css');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    img{
+        width: calc(100%/3);
+        float: left;
+    }
+}
